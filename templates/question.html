@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Math Tutor Wizard</title>
+  <link rel="stylesheet" href="static/styles.css"/>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url("static/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+  <h1>Math Tutor Wizard</h1>
+  <h3>QUESTION TIME!</h3>
+  <img src="static/wizard.png" class="icon" />
+  <h4>Please type in the equation as well as your answer. Show your work!</h4>
+<form action="/question" method="post">
+    <textarea name="answer" placeholder="Enter Question and Answer Here" required /></textarea>
+    <input type="submit" value="Submit Answer"/>
+  </form>
+{% if result %}
+<div class="result">{{ result }}</div>
+{% endif %}

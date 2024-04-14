@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Math Tutor Wizard</title>
+  <link rel="stylesheet" href="static/styles.css"/>
+</head>
+<body>
+  <style>
+    body {
+      background-image: url("static/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+  <h1>Math Tutor Wizard</h1>
+  <h3>A Quick, Fun, and Unique Math Learning Experience</h3>
+  <img src="static/wizard.png" class="icon" />
+  <h4>Simply type what grade you are in and what difficulty of question you would like, and through the powers of GenAI I will create a math problem for you!</h4>
+<form action="/" method="post">
+    <textarea name="initial" placeholder="Enter text here" required /></textarea>
+    <input type="submit" value="Generate Question"/>
+  </form>
+{% if result %}
+<div class="result">{{ result }}</div>
+{% endif %}
